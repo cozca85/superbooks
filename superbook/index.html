@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Superb books</title>
+  </head>
+  <body>
+      <div id="overlay">
+          <div class="row justify-content-md-center">
+            <h1 id="login-title">Welcome. Please login.</h1>
+          </div>
+          <div class="row justify-content-md-center">
+          <div class="col-8">
+          <form id="form-login">
+              <div class="form-group">
+                <label for="loginEmail">Email address</label>
+                <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp">
+              </div>
+              <div class="form-group">
+                <label for="loginPassword">Password</label>
+                <input type="password" class="form-control" id="loginPassword">
+              </div>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="rememberLoginCheck">
+                <label class="form-check-label" for="rememberLoginCheck">Remember login</label>
+              </div>
+              <button type="submit" class="btn btn-primary" id="submitLoginForm">Submit</button>
+            </form>
+            <div class="alert alert-danger hide" role="alert" id="login-alert">
+                Email and password are required
+            </div>
+          </div>
+        </div>
+      </div> 
+      <div class="row"> 
+          <div class="col-12">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <a class="navbar-brand" href="#">Books</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                      
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                          <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Book facts
+                              </a>
+                              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#bookonemodal">Fiction</a>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#booktwomodal">Non-fiction</a>
+                              </div>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" onclick="logout()" href="#" tabindex="-1" aria-disabled="true">Logout</a>
+                            </li>
+                          </ul>
+                          <form class="form-inline my-2 my-lg-0" id="search-form">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search-box-input">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                          </form>
+                        </div>
+                      </nav>
+  
+                      <!-- Modal -->
+                     <div class="modal fade" id="bookonemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                       <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                             <div class="modal-header">
+                                 <h5 class="modal-title" id="exampleModalLabel">BookOne Facts</h5>
+                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                             </button>
+                       </div>
+                         <div class="modal-body">
+                            Fact about book one 
+                        </div>
+                           <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                           </div>
+                         </div>
+                       </div>
+                   </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="booktwomodal" tabindex="-1" role="dialog" aria-labelledby="exampleLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                           <div class="modal-content">
+                              <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleLabel">Booktwo Facts</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                 <span aria-hidden="true">&times;</span>
+                              </button>
+                        </div>
+                          <div class="modal-body">
+                             Fact about book two
+                         </div>
+                            <div class="modal-footer">
+                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+    
+        <div class="container-fluid">
+            <div class="row justify-content-md-center">
+                    <h1> Books </h1>
+            </div>
+
+            <div class="row justify-content-md-center">
+                <img src="/protractor/superbook/images/superbooks_v4.png" alt="Superhero Image">
+            </div>
+
+            <div class="row justify-content-md-center">
+                <div class="col-8">
+                        <p>
+                                Imagine that you are tasked with building a shortlist of must-read books for everyone. We have given you a few books to start with.
+                                Add as many books as you would like to build your dream shortlist of books. 
+                        </p>
+                </div>
+            </div>
+
+            <div class="row justify-content-md-center">
+                <h3>Build your library:</h3>
+            </div>
+
+            <div class="row justify-content-md-center" bg-light>
+                <div class="col-9">
+                        <ul class="list-group" id="book-list">
+                                <li class="list-group-item">BookOne</li>
+                                <li class="list-group-item">BookTwo</li>
+                                <li class="list-group-item">BookThree</li>
+                                <li class="list-group-item">BookFour</li>
+                                <li class="list-group-item">BookFive</li>
+                              </ul>
+                <hr>
+                <div class="alert alert-danger hide" role="alert" id="addBook-Alert">
+                  A simple danger alert—check it out!
+                </div>
+                
+                <form id="add-book-form">
+                        <div class="form-group">
+                          <label for="bookInput">Add a book</label>
+                          <input type="text" class="form-control" id="bookInput" placeholder="Enter a book name">
+                          <small id="emailHelp" class="form-text text-muted"></small>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                
+                </div>
+                
+            </div>
+
+            <div class="row justify-content-md-center" bg-light>
+                <div class="col-9">
+                  <h4>
+                    Vote for your favorite book
+                  </h4>
+                    <div class="alert alert-primary hide" role="alert" id="vote-alert">
+                      Thanks for voting !
+                    </div>
+                    <form id="vote-form">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="heroMovieRadio" id="heroMovieRadio1" value="option1" checked>
+                        <label class="form-check-label" for="heroMovieRadio1">
+                          MegaBook
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="heroMovieRadio" id="heroMovieRadio2" value="option2">
+                        <label class="form-check-label" for="heroMovieRadio2">
+                          Atlas
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="heroMovieRadio" id="heroMovieRadio3" value="option3" >
+                        <label class="form-check-label" for="heroMovieRadio3">
+                          InfoBook
+                        </label>
+                      </div>
+                      <div class="form-check">
+                          <input class="form-check-input" type="radio" name="heroMovieRadio" id="heroMovieRadio4" value="option4" >
+                          <label class="form-check-label" for="heroMovieRadio4">
+                            UltraBook
+                          </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="heroMovieRadio" id="heroMovieRadio5" value="option5" >
+                            <label class="form-check-label" for="heroMovieRadio5">
+                              BookInBook
+                            </label>
+                          </div>
+                          <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+                      <table class="table table-light">
+                          <thead>
+                            <tr>
+                              <th scope="col"><strong>Books</strong></th>
+                              <th scope="col"><strong>Votes</strong></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td id="bookName1">MegaBook</td>
+                              <td id="bookVotes1">10</td>
+                            </tr>
+                            <tr>
+                              <td id="bookName2">Atlas</td>
+                              <td id="bookVotes2">11</td>
+                            </tr>
+                            <tr>
+                              <td id="bookName3">UltraBook</td>
+                              <td id="bookVotes3">18</td>
+                            </tr>
+                            <tr>
+                              <td id="bookName4">BookInBook</td>
+                             <td id="bookVotes4">15</td>
+                              </tr>
+                              <tr>
+                                 <td id="bookName5">InfoBook</td>
+                                 <td id="bookVotes5">15</td>
+                              </tr>
+                          </tbody>
+                        </table>
+
+                </div>
+            </div>
+      </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  
+    <script src="./js/script.js">
+    </script>
+  </body>
+</html>
